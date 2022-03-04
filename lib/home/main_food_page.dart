@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onlinefooddelivery/home/food_page_body.dart';
 import 'package:onlinefooddelivery/utils/colors.dart';
 import 'package:onlinefooddelivery/widgets/widget.small.text.dart';
 import 'package:onlinefooddelivery/widgets/widget_big_text.dart';
@@ -48,6 +49,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ],),
             ),
           ),
+          FoodPageBody()
         ],
       ),
     );
