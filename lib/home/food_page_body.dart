@@ -58,7 +58,57 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               activeSize: Size(18, 9),
               activeShape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20))),
-        )
+        ),
+        SizedBox(height: 30,),
+        Container(
+          margin: EdgeInsets.only(left: 12),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(text: 'Popular'),
+              SizedBox(width: 10,),
+              Container(
+                margin: EdgeInsets.only(bottom: 3),
+                child: BigText(text: '.',color: Colors.black26,),
+              ),
+              SizedBox(width: 10,),
+              Container(
+                margin: EdgeInsets.only(bottom: 2),
+                child: SmallText(text: 'Food paring',color: Colors.black26,),
+              ),
+            ],
+          ),
+        ),
+        ///List of Food
+         Container(
+           margin: EdgeInsets.only(top: 10),
+           height: 300,
+           child: ListView.builder(
+             physics: AlwaysScrollableScrollPhysics(),
+             shrinkWrap: true,
+                itemCount: 10,
+                itemBuilder: (context,index){
+                return Container(
+                  margin: EdgeInsets.only(left: 20,right: 20),
+                  child: Row(
+                    children: [
+                      Container(
+                        width: 120 ,
+                        height: 120,
+                        decoration: BoxDecoration(
+                          color: Colors.white38,
+                        image: DecorationImage(
+                            fit: BoxFit.cover, image: AssetImage('assets/food.png')),
+                        borderRadius: BorderRadius.circular(30),
+                      
+                        ),),
+                    ],
+                  ),
+                );
+                        }),
+         ),
+          
+        
       ],
     );
   }
