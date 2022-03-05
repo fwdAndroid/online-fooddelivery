@@ -52,7 +52,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
           ),
           
           // Show Body Section
-          FoodPageBody()
+          Expanded(child: SingleChildScrollView(child: FoodPageBody()))
         ],
       ),
     );
