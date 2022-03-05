@@ -82,16 +82,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         ///List of Food
          Container(
            margin: EdgeInsets.only(top: 10),
-           height: 300,
+           height: 310,
            child: ListView.builder(
              physics: AlwaysScrollableScrollPhysics(),
              shrinkWrap: true,
                 itemCount: 10,
                 itemBuilder: (context,index){
                 return Container(
-                  margin: EdgeInsets.only(left: 20,right: 20),
+                  margin: EdgeInsets.only(left: 10,right: 10,bottom: 10),
                   child: Row(
                     children: [
+                      // Image
                       Container(
                         width: 120 ,
                         height: 120,
@@ -102,6 +103,58 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         borderRadius: BorderRadius.circular(30),
                       
                         ),),
+                      // Text
+                      Expanded(
+                        child: Container(
+                          height: 100,
+                          
+                         decoration: BoxDecoration(
+                           borderRadius: BorderRadius.only(topRight: Radius.circular(20),
+                           bottomRight: Radius.circular(20)),
+                           color: Colors.white
+                         ),
+                         child: Padding(padding: EdgeInsets.only(left: 10),
+                         child: Column(
+                           children: [
+                             BigText(text: 'Nutritions Food'),
+                             SmallText(text: 'With Cheese'),
+
+                             SizedBox(height: 7,),
+                             Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                         
+                          IconAndTextWidget(
+                              color: AppColors.textColor,
+                              text: 'Normal',
+                              iconCOlor: AppColors.iconColor1,
+                              iconData: Icons.circle_sharp),
+                          
+                          IconAndTextWidget(
+                              color: AppColors.mainColor,
+                              text: '1.7Km',
+                              iconCOlor: AppColors.mainColor,
+                              iconData: Icons.location_on),
+                          
+                         
+                        ],
+                      ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.center,
+                         children: [
+
+                           IconAndTextWidget(
+                                  color: AppColors.mainColor,
+                                  text: '23 min',
+                                  style: TextStyle(fontSize: 10),
+                                  iconCOlor: AppColors.iconColor2,
+                                  iconData: Icons.access_time_rounded),
+                         ],
+                       )
+                           ],
+                         ),),
+                        ),
+                      )
                     ],
                   ),
                 );
@@ -164,6 +217,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         height: 10,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Wrap(
                             children: List.generate(5, (index) {
@@ -173,17 +227,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                               );
                             }),
                           ),
-                          SizedBox(
-                            width: 10,
-                          ),
+                          
                           SmallText(text: '4.5'),
-                          SizedBox(
-                            width: 10,
-                          ),
+                         
                           SmallText(text: '1287'),
-                          SizedBox(
-                            width: 10,
-                          ),
+                          
+                          
                           SmallText(
                             text: 'comments',
                             overflow: TextOverflow.clip,
@@ -194,26 +243,21 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         height: 20,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          SizedBox(
-                            width: 9,
-                          ),
+                         
                           IconAndTextWidget(
                               color: AppColors.textColor,
                               text: 'Normal',
                               iconCOlor: AppColors.iconColor1,
                               iconData: Icons.circle_sharp),
-                          SizedBox(
-                            width: 9,
-                          ),
+                          
                           IconAndTextWidget(
                               color: AppColors.mainColor,
                               text: '1.7Km',
                               iconCOlor: AppColors.mainColor,
                               iconData: Icons.location_on),
-                          SizedBox(
-                            width: 9,
-                          ),
+                          
                           IconAndTextWidget(
                               color: AppColors.mainColor,
                               text: '23 min',

@@ -6,8 +6,9 @@ class IconAndTextWidget extends StatelessWidget {
   final String text;
   final Color color;
   final Color iconCOlor;
+  final TextStyle? style;
 
-  const IconAndTextWidget({ Key? key, required this.color,required this.text,required this.iconCOlor,required this.iconData }) : super(key: key);
+  const IconAndTextWidget({ Key? key, required this.color,required this.text,required this.iconCOlor,required this.iconData, this.style }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
