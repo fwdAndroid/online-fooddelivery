@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:onlinefooddelivery/utils/colors.dart';
 import 'package:onlinefooddelivery/widgets/widget.small.text.dart';
+import 'package:onlinefooddelivery/widgets/widget_app_column..dart';
 import 'package:onlinefooddelivery/widgets/widget_big_text.dart';
 import 'package:onlinefooddelivery/widgets/widget_icon_text.dart';
 
@@ -209,64 +210,9 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 ], borderRadius: BorderRadius.circular(30), color: Colors.white),
                 child: Container(
                   padding: EdgeInsets.only(top: 15, left: 5, right: 5, bottom: 5),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      BigText(text: 'Chinese Side'),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Wrap(
-                            children: List.generate(5, (index) {
-                              return Icon(
-                                Icons.star,
-                                color: AppColors.mainColor,
-                              );
-                            }),
-                          ),
-                          
-                          SmallText(text: '4.5'),
-                         
-                          SmallText(text: '1287'),
-                          
-                          
-                          SmallText(
-                            text: 'comments',
-                            overflow: TextOverflow.clip,
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                         
-                          IconAndTextWidget(
-                              color: AppColors.textColor,
-                              text: 'Normal',
-                              iconCOlor: AppColors.iconColor1,
-                              iconData: Icons.circle_sharp),
-                          
-                          IconAndTextWidget(
-                              color: AppColors.mainColor,
-                              text: '1.7Km',
-                              iconCOlor: AppColors.mainColor,
-                              iconData: Icons.location_on),
-                          
-                          IconAndTextWidget(
-                              color: AppColors.mainColor,
-                              text: '23 min',
-                              iconCOlor: AppColors.iconColor2,
-                              iconData: Icons.access_time_rounded)
-                        ],
-                      )
-                    ],
-                  ),
+                  child:AppColumn(
+                    text: 'Raita',
+                  )
                 ),
               ),
             ),
