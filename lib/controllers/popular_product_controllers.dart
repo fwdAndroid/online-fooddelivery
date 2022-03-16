@@ -17,7 +17,7 @@ class PopularProductController extends GetxController{
      print(_popularProductList);
      update();
    }else{
-
+        
    }
   }
 }

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:onlinefooddelivery/utils/app_contants.dart';
 
 class ApiClient extends GetConnect implements GetxService{
   late String token;
@@ -8,7 +9,7 @@ class ApiClient extends GetConnect implements GetxService{
   ApiClient({
     required this.appBaseUrl
   }){
-    token= "";
+    token= AppContants.tokens;
    baseUrl = appBaseUrl;
    timeout = Duration(seconds: 30);
    _mainHeaders = {
