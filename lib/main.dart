@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:onlinefooddelivery/controllers/popular_product_controllers.dart';
 import 'package:onlinefooddelivery/pages/food/popular_food_detail.dart';
 import 'package:onlinefooddelivery/pages/food/recommended_food_detail.dart';
 import 'package:onlinefooddelivery/pages/home/main_food_page.dart';
@@ -15,7 +17,8 @@ class MyApp extends StatelessWidget {
    // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    Get.find<PopularProductController>().getPopularProductList();
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
